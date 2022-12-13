@@ -1,0 +1,391 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+	}
+
+body {
+    background:radial-gradient(hotpink,coral,yellow);
+    color: red;
+	border-style:solid;
+	  border-width:20px;
+	  border-color:blue red green red;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    /* background-image: url(images/me.jpg); */
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    padding: 10px 10%;
+	color:white;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+	word-spacing:8px;
+	letter-spacing:1px;
+
+    z-index: 1;
+}
+
+.logo {
+    font-size: 4em;
+    color: rgb(228, 15, 103);
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: .5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.header-text {
+    margin-top: 20%;
+    font-size: 30px;
+}
+
+.header-text h1 {
+    margin-top: 20px;
+    font-size: 60px;
+}
+
+.header-text h1 span {
+    color: #ff004f;
+}
+
+#about {
+    height: 100vh;
+    padding-left: 6%;
+    padding-right: 6%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.box {
+    padding: 34px;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    border: none;
+    border: 3px solid silver;
+    outline: none;
+    background: transparent;
+    border-radius: 12px;
+}
+
+.box h1 {
+    color: #ababab;
+    font-size: 60px;
+    margin-bottom: 8px;
+}
+
+.content {
+    font-size: 25px;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: .5s;
+}
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span {
+    color: yellow;
+    font-size: 20px;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+#services {
+    padding: 30px 0;
+}
+
+.sub-title {
+    font-size: 60px;
+    font-weight: 500;
+    color: yellow;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.skills-list div {
+    background: brown;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 220;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.skills-list div h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.skills-list div a {
+    margin-top: 8px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    display: inline-block;
+}
+
+.skills-list div:hover {
+    background: #ff004f;
+    transform: translateY(-10px);
+}
+
+#portfolio {
+    padding: 50px 0;
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.info {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+    cursor: pointer;
+}
+
+.info h3 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.info a {
+    text-decoration: none;
+    background-color: #fff001;
+    color: #ff004f;
+    border-radius: 16px;
+    font-size: 15px;
+    margin-top: 20px;
+    padding: 3px 2px;
+    text-align: center;
+    width: 50px;
+}
+
+.work:hover img {
+    transform: scale(1.1);
+}
+
+.work:hover .info {
+    height: 100%;
+}
+
+.btn {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #ff004f;
+}
+
+.contact-container {
+    display: flex;
+}
+
+.contact-sub-title {
+    font-size: 40px !important;
+}
+
+.col-left {
+    flex-basis: 35%;
+}
+
+.col-right { color:red;
+background:radial-gradient(hotpink,coral,yellow);
+background-color:green;
+	}
+
+.col-left p {
+    margin-top: 30px;
+}
+
+.social-icons {
+    text-decoration: none;
+    margin-top: 30px;
+}
+
+.social-icons img {
+    margin-right: 15px;
+    width: 60px;
+    border-radius: 10px;
+    background: #fff;
+    display: inline-block;
+    transition: transform .5s;
+}
+
+.social-icons img:hover {
+    transform: translateY(-5px);
+    background-color: #ff004f;
+}
+
+.btn.btn2 {
+    display: inline-block;
+    background: #ff004f;
+}
+
+.col-right form {
+background:radial-gradient(hotpink,coral,yellow);
+    width: 100%;
+
+	}
+
+form input,
+form textarea ,col-right{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: lightbrown;
+    padding: 15px;
+    margin: 15px 0;
+    color: #ff004f;
+    font-size: 19px;
+    border-radius: 7px;
+}
+.fo{   
+background:linear-gradient(pink,blue,coral);
+
+}
+.fo{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: lightbrown;
+    padding: 15px;
+    margin: 15px 0;
+    color: #ff004f;
+    font-size: 19px;
+    border-radius: 7px;
+}
+
+form .btn2 {
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 14px 0;
+    background: skyblue;
+    color:green;
+    font-weight: 300;
+    margin-top: 10px;
+}
