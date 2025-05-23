@@ -2,3 +2,27 @@ html {
   height: 100%;
   width: 100%;
 }
+
+
+@keyframes mca{
+  from {background-color: hotpink;}
+  to {background-color: yellow;}
+}
+
+@keyframes bcs{
+  from {background-color: peru;}
+  to {background-color: hotpink;}
+}
+
+@keyframes hsc{
+
+  from {background-color: yellow;}
+  to {background-color: cyan;}
+}
+
+@keyframes ssc{
+  from {background-color: orange;}
+  to {background-color: pink;}
+}
+
+
